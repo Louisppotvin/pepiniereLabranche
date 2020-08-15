@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Aug 12, 2020 at 05:27 PM
+-- Generation Time: Aug 15, 2020 at 08:36 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `nom` varchar(255) NOT NULL,
   `courriel` varchar(255) NOT NULL,
   `objetMessage` text NOT NULL,
+  `message` text NOT NULL,
   PRIMARY KEY (`idContact`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -41,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`idContact`, `nom`, `courriel`, `objetMessage`) VALUES
-(1, 'test', 'test', 'test- ce message ne devrait être diffusé');
+INSERT INTO `contact` (`idContact`, `nom`, `courriel`, `objetMessage`, `message`) VALUES
+(1, 'test', 'test', 'test- ce message ne devrait être diffusé', '');
 
 -- --------------------------------------------------------
 
@@ -127,6 +128,7 @@ CREATE TABLE IF NOT EXISTS `usager` (
 
 INSERT INTO `usager` (`username`, `password`) VALUES
 ('louis', 'potvin'),
+('newtest', 'ok'),
 ('sylvain', 'labranche'),
 ('test', '1234');
 COMMIT;
