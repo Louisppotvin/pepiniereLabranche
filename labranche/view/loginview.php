@@ -1,17 +1,23 @@
-<!DOCTYPE html>
 <?php
 session_start();
-if(isset($_SESSION['user'])) header ("location:main.php");
+if(!isset($_SESSION['user'])) {
+	echo "pas connecte";
+} else {
+	echo "connecte";
+	header ("location: index.php?action=contact");
+}
 ?>
 
-<html>
+<!DOCTYPE html>
+<html id="login">
 <head>
-	<title>Login Page</title>
+	<meta charset="utf-8">
+	<title>Connectez-Vous!</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../public/css/loginStyle.css">
 </head>
-<body>
+<body id="login">
 	<div class="container">
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">

@@ -2,7 +2,6 @@
 require_once("model/model.php");
 
 
-
 function connexionBD(){
     try
     {
@@ -15,20 +14,27 @@ function connexionBD(){
     }	
 }
 
-function getPosts()
-{
-    $db = dbConnect();
-    $req = $db->query('SELECT * FROM `usager`');
+class Contact {
+	
+	public function sendMessage($name, $email, $object, $texte)
+	{
+			$db = new PDO('mysql:host=localhost;dbname=labranche;port=3308;charset=utf8', 'root', '');
+			
+			$requete= $db->prepare('INSERT INTO contact(nom, courriel, objetmessage, message) VALUES(?, ?, ?, ?)');
+			$affectedLines = $requete->execute(array($name, $email, $object, $texte));
 
-    return $req;
+        return $affectedLines;
+		
+			
+	}
+	
 }
 
 class Login {
 	
 	public function getlogin()
 	{
-		if(isset($_POST["username"]) && isset($_POST["password"]))
-			{
+		if(isset($_POST["username"]) && isset($_POST["password"])){
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 
@@ -41,17 +47,19 @@ class Login {
 			$count  = mysqli_num_rows($res);
 				if($count > 0 )
 				{ 
+					session_start();
+					$_SESSION["user"] = $username;
 					return "login";
 				}else{
 					return "Utilisateur invalide";
 					}
-			}
+		}
 	}
 	
-public function register()
+	public function register()
 	{
-		if(isset($_POST["username"]) && isset($_POST["regpassword"]))
-			{
+		if(isset($_POST["username"]) && isset($_POST["regpassword"])){
+			
 			$username = $_POST['username'];
 			$password = $_POST['regpassword'];
 			
@@ -73,6 +81,11 @@ public function register()
 				return "Registered";
 				}
 			}
+	}
+	
+	public function logout() {
+		session_start();
+		session_destroy();
 	}
 }
 
