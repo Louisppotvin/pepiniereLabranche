@@ -10,7 +10,7 @@
 
 </head>
 <body>
-	<nav class="myNav" >
+	<nav class="myNav" id="navB" >
 		<div class="logoBox">
 			<img class="logo" src="../logos/logo.png">
 			<p class="companyName">La Pépinière Labranche</p> 
@@ -18,9 +18,10 @@
 		
 		<ul class="uLinks">
 			<li class ="uLinksList"><a class = "uLinksListElement" href="../index.html">Produit</a></li>
-			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Panier</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Contact</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href	="#">Livre d'or</a></li>
+			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Déconnexion</a></li>
+			<a href="#" onclick="changeFont()" class="button">Changer Thème</a>
 		</ul>
 
 		<a href="#" class="burger">
@@ -30,29 +31,30 @@
 		</a>
 	</nav>
 
+	<div id="con">
+		<div class="cont">
 
-	<div class="cont">
-
-		<div class="imageDescriptionBox">
-			<img class="photoDescription" src="../images/arbresNoix/walnut.jpg">
-		</div>
-		<div class="description">
-			<p class="title">Noyer</p>
-			<p class="title prix">$70 CAD</p>
-			<ul>
-			
-				<li>Cette noyer est un arbre à noix à croissance rapide, mais à vie relativement courte (75 ans)</li>
-				<li>Hauteur à maturité	25 mètres.</li>
-				<li>Ensoleillement: Plein soleil</li>
-				<li>Sol: bien drainé</li>
-				<li>Récolte: mi-septembre</li>
-				<li>Couleur du fruit: cosse brune / noix crème</li>
-				<li>Livraison gratuite partout au Canada avec un minimum d'achat de 75$</li>
-			</ul>
+			<div class="imageDescriptionBox">
+				<img class="photoDescription" src="../images/arbresNoix/walnut.jpg">
+			</div>
+			<div class="description">
+				<p class="title">Noyer</p>
+				<p class="title prix">$70 CAD</p>
+				<ul>
+				
+					<li>Cette noyer est un arbre à noix à croissance rapide, mais à vie relativement courte (75 ans)</li>
+					<li>Hauteur à maturité	25 mètres.</li>
+					<li>Ensoleillement: Plein soleil</li>
+					<li>Sol: bien drainé</li>
+					<li>Récolte: mi-septembre</li>
+					<li>Couleur du fruit: cosse brune / noix crème</li>
+					<li>Livraison gratuite partout au Canada avec un minimum d'achat de 75$</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div class="pied">
+	<div class="pied"  id="myPied">
 		<p>Visiteurs: </p>
 	</div>
 	

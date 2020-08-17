@@ -13,17 +13,20 @@
 
 	<! – NAVIGATION BAR –>
 
-	<nav class="myNav" >
-		<div class="logoBox">
-			<img class="logo" src="logos/logo.png">
-			<p class="companyName">La Pépinière Labranche</p> 
-		</div>
+	<nav class="myNav" id="navB" >
+		
+			<div class="logoBox">
+				<img class="logo" src="logos/logo.png">
+				<p  class="companyName">La Pépinière Labranche</p>
+			</div>
+		
 		
 		<ul class="uLinks">
 			<li class ="uLinksList"><a class = "uLinksListElement" href="index.html">Produit</a></li>
-			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Panier</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Contact</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href	="#">Livre d'or</a></li>
+			<li class ="uLinksList"><a class = "uLinksListElement" href	="#">Déconnexion</a></li>
+			<a href	="#" onclick="changeFont()" class="button">Changer Thème</a>
 		</ul>
 
 		<a href="#" class="burger">
@@ -35,15 +38,18 @@
 
 
 	<! – CONTENU –> 
+	<div id="con">
 	<div class="contenu">
-		<p class="title">Les plus populaires</p><br>
+				<p class="title">Les plus populaires</p><br>
 		<div class="arbresFruitiers">
-			<h3 >Arbres Fruitiers</h3><br>
+				<h3 class="soustitre1">Arbres Fruitiers</h3><br>
+				
+			
 			<div class="imgArbresContainer">
 				<a href="descriptions/citronnier.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbresFruitiers/lemon.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 								<h4>CITRONNIER</h4>
 								<p>Regarder</p>
 						</div>
@@ -52,7 +58,7 @@
 				<a href="descriptions/poirier.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbresFruitiers/pear.jpg">
-					 	<div class="textHover">
+					 	<div id="myHover" class="textHover">
 								<h4>POIRIER</h4>
 								<p>Regarder</p>
 						</div>
@@ -61,7 +67,7 @@
 				<a href="descriptions/abricotier.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbresFruitiers/apricot.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 								<h4>ABRICOTIER</h4>
 								<p>Regarder</p>
 						</div>
@@ -76,7 +82,7 @@
 				<a href="descriptions/amandier.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbresNoix/almond.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 							<h4>AMANDIER</h4>
 							<p>Regarder</p>
 						</div>
@@ -85,7 +91,7 @@
 				<a href="descriptions/noisetier.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbresNoix/hazelnut.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 								<h4>NOISETIER</h4>
 								<p>Regarder</p>
 						</div>
@@ -94,7 +100,7 @@
 				<a href="descriptions/noyer.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbresNoix/walnut.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 							<h4>NOYER</h4>
 							<p>Regarder</p>
 						</div>
@@ -109,7 +115,7 @@
 				<a href="descriptions/bluets.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbustesFruitiers/blueberry.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 							<h4>BLEUETS</h4>
 							<p>Regarder</p>
 						</div>
@@ -118,7 +124,7 @@
 				<a href="descriptions/raisins.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbustesFruitiers/grape.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 							<h4>RAISINS</h4>
 							<p>Regarder</p>
 						</div>
@@ -127,7 +133,7 @@
 				<a href="descriptions/prunier.html">
 					<div class="imgContainer">
 						<img class="treeImage" src="images/arbustesFruitiers/plum.jpg">
-						<div class="textHover">
+						<div id="myHover" class="textHover">
 							<h4>PRUNIER</h4>
 							<p>Regarder</p>
 						</div>
@@ -136,9 +142,10 @@
 			</div>
 		</div> <br>
 	</div>
+</div>
 
 	<! – PIED –> 
-	<div class="pied">
+	<div class="pied" id="myPied">
 		<p>Visiteurs: </p>
 	</div>
 	

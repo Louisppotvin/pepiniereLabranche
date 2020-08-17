@@ -10,7 +10,7 @@
 
 </head>
 <body>
-	<nav class="myNav" >
+	<nav class="myNav" id="navB">
 		<div class="logoBox">
 			<img class="logo" src="../logos/logo.png">
 			<p class="companyName">La Pépinière Labranche</p> 
@@ -18,9 +18,10 @@
 		
 		<ul class="uLinks">
 			<li class ="uLinksList"><a class = "uLinksListElement" href="../index.html">Produit</a></li>
-			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Panier</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Contact</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href	="#">Livre d'or</a></li>
+			<li class ="uLinksList"><a class = "uLinksListElement" href="#">Déconnexion</a></li>
+			<a href="#"  onclick="changeFont()" class="button">Changer Thème</a>
 		</ul>
 
 		<a href="#" class="burger">
@@ -30,28 +31,29 @@
 		</a>
 	</nav>
 
+	<div id="con">
+		<div class="cont">
 
-	<div class="cont">
-
-		<div class="imageDescriptionBox">
-			<img class="photoDescription" src="../images/arbresNoix/hazelnut.jpg">
-		</div>
-		<div class="description">
-			<p class="title">NOISETIER D'AMERIQUE</p>
-			<p class="title prix">$15 CAD</p>
-			<ul>
-			
-				<li>Ce noisetier est la seule espèce de noisetier à pousser naturellement au Québec</li>
-				<li>Hauteur à maturité: 3 mètres</li>
-				<li>Ensoleillement: partiel ou plein soleil</li>
-				<li>Sol: secs ou humides, pourvu que ces derniers soient bien drainés.</li>
-				<li>Noisettes: petite taille</li>
-				<li>Livraison gratuite partout au Canada avec un minimum d'achat de 75$</li>
-			</ul>
+			<div class="imageDescriptionBox">
+				<img class="photoDescription" src="../images/arbresNoix/hazelnut.jpg">
+			</div>
+			<div class="description">
+				<p class="title">NOISETIER D'AMERIQUE</p>
+				<p class="title prix">$15 CAD</p>
+				<ul>
+				
+					<li>Ce noisetier est la seule espèce de noisetier à pousser naturellement au Québec</li>
+					<li>Hauteur à maturité: 3 mètres</li>
+					<li>Ensoleillement: partiel ou plein soleil</li>
+					<li>Sol: secs ou humides, pourvu que ces derniers soient bien drainés.</li>
+					<li>Noisettes: petite taille</li>
+					<li>Livraison gratuite partout au Canada avec un minimum d'achat de 75$</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div class="pied">
+	<div class="pied"  id="myPied">
 		<p>Visiteurs: </p>
 	</div>
 	
