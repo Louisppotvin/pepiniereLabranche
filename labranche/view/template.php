@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<script src="script.js" defer></script>
+	<script src="../public/js/script.js" defer></script>
 	<link href="../public/css/Style.css"" rel="stylesheet" type="text/css">
 
 
