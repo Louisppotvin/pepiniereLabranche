@@ -1,9 +1,10 @@
-html, body {
+body {
 background-color: #ECE7DF;
 background-size: cover;
-background-repeat: no-repeat;
 height: 100%;
 font-family: 'Poppins', sans-serif;
+ width: 100vw;
+  min-height: 100vh;
 }
 
 #login{
@@ -83,12 +84,14 @@ hr {
     justify-content: space-between;
 	box-sizing: inherit;
 }
-.colForm.flex100 {
-    flex: 0 0 100%;
-}
-.container{
-height: 100%;
+
+.loginBox{
+
+min-height: 100%; 
 align-content: center;
+justify-content:center;
+align-items:center;
+
 }
 
 .contactcenter{
@@ -97,9 +100,10 @@ border: 3px solid green;
 }
 
 .card{
+		margin-top: 13%;
 height: 300px;
-margin-top: auto;
-margin-bottom: auto;
+align-content: center;
+justify-content:center;
 width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
 }

@@ -1,5 +1,6 @@
 <?php
 require_once("model/model.php");
+require_once('model/productModel.php');
 
 function login()
 {
@@ -29,13 +30,36 @@ function registering(){
 function contactMessage($name, $email,  $object, $texte){
 	$contact = new Contact();
 	$affectedLines = $contact-> sendMessage($name, $email, $object, $texte);
+	
 		
 		if ($affectedLines === true){
-			require ("view/contactview2.php");	
+			include "view/contactview2.php";	
 		}
 		else {
 			include "view/contactview.php";	
 		}
 }
+
+function showProduits(){
+	$produits = new Produit();
+	$result = $produits->getproduits();
+	
+	if (!isset($_GET['action'])){
+	include "view/productview.php";
+	}
+}
+function showProduit(){
+	$produit = new Produit();
+	$result = $produit->getProduit($_GET['id']);
+	
+	require "view/descriptionview.php";	
+}
+
+function logout(){
+	$logins = new Login();
+	$logins->logout();
+	
+}
+
 
 ?>

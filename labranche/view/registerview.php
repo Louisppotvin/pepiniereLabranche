@@ -4,12 +4,13 @@ require_once('controller/controller.php');
 
 session_start();
 if(!isset($_SESSION['user'])) {
-	echo "pas connecte";
 	/* header ("index.php?action=contact"); */
 } else {
-	echo "connecte";
+
 }
 ?>
+
+
 
 <html id="login">
 <head>
@@ -18,10 +19,11 @@ if(!isset($_SESSION['user'])) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../public/css/loginStyle.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body id="login">
+<body id="login"><?php require('template.php'); ?>
 	<div class="container">
-		<div class="d-flex justify-content-center h-100">
+		<div style="margin-top: 13%;" class="d-flex justify-content-center h-100">
 			<div class="card" id="registerCard">
 				<div class="card-header">
 					<h3>Enregistrez-Vous! </h3>

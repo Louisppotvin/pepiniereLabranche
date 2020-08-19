@@ -1,4 +1,5 @@
 <?php
+
 require_once('controller/controller.php');
 
 if (isset($_GET['action'])) {
@@ -9,6 +10,10 @@ if (isset($_GET['action'])) {
 		case 'loginform':
 			login();
 			break;
+		case 'logout':
+			logout();
+			include "view/loginview.php" ;	
+			break;
 		case 'register':
 			include "view/registerview.php";
 			break;
@@ -18,16 +23,22 @@ if (isset($_GET['action'])) {
 		case 'contactform':
 			if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["object"]) && isset ($_POST["contactTexte"])){
 				contactMessage($_POST["name"], $_POST["email"], $_POST["object"],$_POST["contactTexte"]);
-			}else{ echo "Erreur: tous les champs ne sont pas remplis!";
+			}else{ 
+			echo "Erreur: tous les champs ne sont pas remplis!";
 			}
 			break;
 		case 'contact':
 			include "view/contactview.php";
 			break;
+		case 'produit':
+			showProduits();
+			break;
+		case 'descproduit':
+				showProduit();
 		default:
-			include "view/loginview.php";
+			showProduits();
 	}
 }else {
-	include "view/loginview.php";
+	showProduits();
 }
 ?>

@@ -1,0 +1,76 @@
+html, body {
+	background-color: #ECE7DF;
+	background-size: cover;
+	height: 100%;
+	font-family: 'Poppins', sans-serif;
+	width: 100vw;
+	min-height: 100vh;
+	 padding:0;
+}
+#title {
+  	padding:1%;
+	text-align: center;
+	letter-spacing: 5px;
+	font-size:36px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.gallery {
+display: flex;
+ flex-wrap: wrap;
+justify-content:center;
+padding-left:12%;
+padding-right:12%;
+}
+
+.textHover {
+	
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contain:hover .image {
+  opacity: 0.2;
+}
+
+.contain:hover .text {
+
+}
+
+.labelProd{
+	
+}
+
+.text {
+	padding=5px;
+border-radius: 5px;
+border-style: solid;
+border-color: white;
+color: white;
+background-color: rgba(0,0,0, 0.7);
+position: absolute;
+font-size: 24px;
+text-transform: uppercase;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.contain {
+  position: relative;
+  width: 30%;
+}

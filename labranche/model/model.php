@@ -1,4 +1,5 @@
 <?php
+require_once('model/productModel.php');
 require_once("model/model.php");
 
 

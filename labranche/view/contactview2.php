@@ -1,22 +1,26 @@
 <?php
-session_start();
 if(!isset($_SESSION['user'])) {
-	echo "pas connecte";
-	header ("location: index.php?action=login");
-} else {
-	echo "connecte";
+	session_start();
+	if(!isset($_SESSION['user'])) {
+
+		header ("location: index.php?action=login");
+	} else {
+
+	}
 }
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head>	
 <meta charset="utf-8">
 <title>Enregistrez-Vous!</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../public/css/loginStyle.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+<?php require('template.php'); ?>
 	<div class="contactcontainer">		
 
 		<div class="contacttitre">
@@ -32,9 +36,10 @@ if(!isset($_SESSION['user'])) {
 				<hr>
 			</div>
 			<div class="contactcenter">
-				<h6>Merci <?php echo $name?>, nous vous répondrons <br> sous peu à l'adresse courriel <?php echo $email ?>.</h6>
+				<h6>Merci <?php echo $name ;?>, nous vous répondrons <br> sous peu à l'adresse courriel <?php echo $email ;?>.</h6>
 			</div>
 		</div>
 	</div>
 </body>
+<?php require('templatePied.php'); ?>
 </html>

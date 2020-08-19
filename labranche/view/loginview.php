@@ -1,9 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['user'])) {
-	echo "pas connecte";
 } else {
-	echo "connecte";
 	header ("location: index.php?action=contact");
 }
 ?>
@@ -16,9 +14,12 @@ if(!isset($_SESSION['user'])) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../public/css/loginStyle.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body id="login">
-	<div class="container">
+
+
+<body style="height:100%;" id="login"><?php require('template.php'); ?>
+	<div style="height:100%;     min-height: 100%;" class="loginBox">
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">
 				<div class="card-header">
@@ -40,7 +41,7 @@ if(!isset($_SESSION['user'])) {
 							<input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
 						</div>
 						<div class="form-group" >
-							<input type="submit" value="Se Connecter" class="btn float-right login_btn">
+							<input type="submit" value="Connecter " class="btn float-right login_btn">
 						</div>
 					</form>
 				</div>
@@ -52,7 +53,12 @@ if(!isset($_SESSION['user'])) {
 				</div>
 			</div>
 		</div>
+		</div>
+		
 	</div>
+
+	
 </body>
+
 </html>
 
