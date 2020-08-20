@@ -2,12 +2,6 @@
 <?php
 require_once('controller/controller.php');
 
-session_start();
-if(!isset($_SESSION['user'])) {
-	/* header ("index.php?action=contact"); */
-} else {
-
-}
 ?>
 
 
@@ -55,16 +49,16 @@ if(!isset($_SESSION['user'])) {
 					</form>
 				</div>
 				<div class="card-footer">
-					<div class="d-flex justify-content-center links">
+					<div id="message" class="d-flex justify-content-center links">
 						
 						Bienvenue à la Pépinière Labranche
+
 						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="/public/js/jquery.js"></script>
 	<script>
 	var password = document.getElementById("regpassword");
 	var confirm = document.getElementById("regpassword2");
@@ -76,9 +70,21 @@ if(!isset($_SESSION['user'])) {
 		confirm.setCustomValidity('');
 	  }
 	}
-
+	
+	function userExiste(){
+	document.getElementById("message").innerHTML = "Il existe déjà un usager avec ce nom!" ;
+		
+	}
 	regpassword.onchange = validatePassword;
 	regpassword2.onkeyup = validatePassword;
+	
+	
+	// <?php if ($result="existe"){ ?>
+	// userExiste();
+	
+	// <?php };  ?>
+	
+		
 	</script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
 			<li class ="uLinksList"><a class = "uLinksListElement" href="index.php">Produit</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href="index.php?action=contact">Contact</a></li>
 			<li class ="uLinksList"><a class = "uLinksListElement" href	="index.php?action=livre">Livre d'or</a></li>
-			<li class ="uLinksList"><a class = "uLinksListElement" href	="index.php?action=logout">Déconnexion</a></li>
+			<li class ="uLinksList"><a id="connect" class = "uLinksListElement" href	="index.php?action=logout">Déconnexion</a></li>
 			<a href	="#" onclick="changeFont()" class="button">Changer Thème</a>
 		</ul>
 
@@ -35,7 +36,29 @@
 		</a>
 	</nav>
 
+<script>
+function connecter(){
+document.getElementById("connect").innerHTML = "Connexion" ;
+document.getElementById("connect").href = "index.php?action=contact";
 
+}
+
+</script>
+
+<?php
+
+if(!isset($_SESSION['user'])) {
+	session_start();
+	
+	if(!isset($_SESSION['user'])) {
+	echo '<script type="text/javascript">',
+				'connecter();', 
+				'</script>';		
+	} else {
+		
+	}
+}
+?>
 	
 </body>
 </html>

@@ -22,8 +22,11 @@ function registering(){
 		if ($result == "Registered"){
 			include "view/loginview.php" ;	
 		}
-		else {
-			include "view/registerview.php";	
+		else if ($result == "existe"){
+			include "view/registerview.php";
+			echo '<script type="text/javascript">',
+				'userExiste();', 
+				'</script>';			
 		}
 }
 
@@ -58,6 +61,7 @@ function showProduit(){
 function logout(){
 	$logins = new Login();
 	$logins->logout();
+	
 	
 }
 

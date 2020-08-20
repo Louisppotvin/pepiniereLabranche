@@ -1,16 +1,20 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<script src="script.js" defer></script>
+	<script src="../public/js/script.js" defer></script>
 	<link href="../public/css/productStyle.css" rel="stylesheet" type="text/css">
 
 
 
 </head>
 <body >
+
+
 <?php require('template.php'); ?>
 
 <br>
@@ -43,7 +47,15 @@
 		</section >
 	</div>
 </div>
-
+<script src="../public/js/jquery.js"></script>
+<script>
+$(document).mousemove(function(e) {
+    $('.logo').offset({
+        left: e.pageX,
+        top: e.pageY + 20
+    });
+});
+</script>
 <?php require('templatePied.php'); ?>
 </body>
 </html>

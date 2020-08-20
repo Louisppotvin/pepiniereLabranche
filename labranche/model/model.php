@@ -73,7 +73,7 @@ class Login {
 			$count  = mysqli_num_rows($res);
 			if($count > 0 )
 			{ 
-				return "Nom d'utilisateur existe déjà";
+				return "existe";
 				
 			}else{
 
