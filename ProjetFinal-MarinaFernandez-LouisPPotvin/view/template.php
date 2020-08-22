@@ -1,5 +1,10 @@
 <! DOCTYPE html>
 <html>
+<?php
+
+$date = date('m/d/Y h:i:s a', time());
+?>
+
 	<head>
 		
 	<link href="public/css/productStyle.css" rel="stylesheet" type="text/css">
@@ -42,9 +47,8 @@
 		 
 		<! – PIED –> 
 		<div class="pied" id="myPied">
-		<p>Visiteurs: <?php if(isset($_SESSION["visitors"])) {
-			echo $_SESSION["visitors"]; 
-		}?></p>
+		<p>Visiteurs: </p>
+		<p><?php echo $date?></p>
 	</div>
 	
 	<script>

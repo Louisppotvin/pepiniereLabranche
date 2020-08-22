@@ -5,7 +5,7 @@ require_once("model/model.php");
 function connexionBD(){
     try
     {
-        $bdd = mysqli_connect("localhost","root","","labranche","3308");
+        $bdd = mysqli_connect("localhost","root","","labranche");
         return $bdd;
     }
     catch(Exception $e)
@@ -18,7 +18,7 @@ class Contact {
 	
 	public function sendMessage($name, $email, $object, $texte)
 	{
-			$db = new PDO('mysql:host=localhost;dbname=labranche;charset=utf8;port=3308;', 'root', '');
+			$db = new PDO('mysql:host=localhost;dbname=labranche;charset=utf8;', 'root', '');
 			
 			$requete= $db->prepare('INSERT INTO contact(nom, courriel, objetmessage, message) VALUES(?, ?, ?, ?)');
 			$affectedLines = $requete->execute(array($name, $email, $object, $texte));
@@ -42,7 +42,7 @@ class Login {
 			$username = stripcslashes($username);
 			$password = stripcslashes($password);
 
-			$conn =mysqli_connect('localhost', 'root', '', 'labranche',"3308");
+			$conn =mysqli_connect('localhost', 'root', '', 'labranche');
 			$res= mysqli_query($conn,"SELECT username, password FROM usager WHERE username = '".$username."' AND  password = '".$password."'");
 			$count  = mysqli_num_rows($res);
 				if($count > 0 )
@@ -93,7 +93,7 @@ class Login {
 class Produit{
 	public function getProduits(){
 	
-	$conn = mysqli_connect("localhost","root","","labranche","3308");
+	$conn = mysqli_connect("localhost","root","","labranche");
     if(!$conn){
 			die("Connection failed: " .mysqli_connect_error());
 		}
@@ -107,13 +107,13 @@ class Produit{
     public function getProduit($prodId)
     {
 		$query ='SELECT * FROM produits WHERE idProduits = ?';
-		$conn = mysqli_connect("localhost","root","","labranche","3308");
+		$conn = mysqli_connect("localhost","root","","labranche");
         $stmt = $conn->prepare($query); 
 		$stmt->bind_param("i", $prodId);
 		$stmt->execute();
 		$result = $stmt->get_result();
 
-        return $result;
+        return $result;	
     }
 }
 class CommentManager
@@ -122,7 +122,7 @@ class CommentManager
 	public function submitComment($texte)
 	{
 		session_start();
-		$conn =mysqli_connect('localhost', 'root', '', 'labranche',"3308");
+		$conn =mysqli_connect('localhost', 'root', '', 'labranche');
 
 		if(!$conn){
 			die("Connection failed: " .mysqli_connect_error());
@@ -140,7 +140,7 @@ class CommentManager
 		if(!isset($_SESSION)) {
 			session_start();
 		}
-		$conn =mysqli_connect('localhost', 'root', '', 'labranche',"3308");
+		$conn =mysqli_connect('localhost', 'root', '', 'labranche');
 
 		if(!$conn){
 			die("Connection failed: " .mysqli_connect_error());
@@ -157,7 +157,7 @@ class CommentManager
 	public function deleteComments($idComment)
 	{
 	
-		$conn =mysqli_connect('localhost', 'root', '', 'labranche',"3308");
+		$conn =mysqli_connect('localhost', 'root', '', 'labranche');
 
 		if(!$conn){
 			die("Connection failed: " .mysqli_connect_error());
@@ -176,7 +176,7 @@ class CommentManager
 
 	public function editTheComment($idComment,$nom,$points,$texte)
 	{
-		$conn =mysqli_connect('localhost', 'root', '', 'labranche',"3308");
+		$conn =mysqli_connect('localhost', 'root', '', 'labranche');
 
 		if(!$conn){
 			die("Connection failed: " .mysqli_connect_error());
@@ -196,7 +196,7 @@ class CommentManager
 	public function changeLikes($idComment, $point)
 	{
 		session_start();
-		$conn =mysqli_connect('localhost', 'root', '', 'labranche',"3308");
+		$conn =mysqli_connect('localhost', 'root', '', 'labranche');
 
 		if(!$conn){
 			die("Connection failed: " .mysqli_connect_error());
@@ -217,7 +217,7 @@ class CommentManager
 
 	class CounterManager {
 	public function addVisitor() {
-	$conn =mysqli_connect('localhost', 'root', '', 'labranche',"3308");
+	$conn =mysqli_connect('localhost', 'root', '', 'labranche');
 
 	if(!$conn){
 			die("Connection failed: " .mysqli_connect_error());

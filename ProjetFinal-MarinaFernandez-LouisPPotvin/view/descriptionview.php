@@ -24,6 +24,8 @@ if(!isset($_SESSION['user'])) {
 			<p class="title"><?php  echo $row ['nomProduits']; ?></p>
 			<p class="title prix"><?php  echo $row ['prix']; ?> CAD$</p>
 			<?php  echo $row ['description']; ?>
+			<br>
+			Quantité: <?php  echo $row ['quantite']; ?>
 		</div>
 	<?php
 	}

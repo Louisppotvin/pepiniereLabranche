@@ -110,7 +110,7 @@ if(!isset($_SESSION['user'])) {
 				?>
 	</div>
 </div>
-<script src="../public/js/jquery.js"></script>
+<script src="public/js/jquery.js"></script>
 <script>
 $(document).mousemove(function(e) {
     $('.logo').offset({
